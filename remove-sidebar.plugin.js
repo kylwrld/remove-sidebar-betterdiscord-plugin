@@ -7,7 +7,7 @@
  */
 
 let id;
-var sidebar_cache;
+var sidebar;
 let is_removed = false;
 
 module.exports = class Remove {
@@ -16,12 +16,11 @@ module.exports = class Remove {
         
         if (event.code == "Pause") {
             if (is_removed) {
-                console.log(sidebar_cache)
-                parent.insertBefore(sidebar_cache, parent.firstChild)    
+                console.log(sidebar)
+                parent.insertBefore(sidebar, parent.firstChild)    
                 is_removed = false;
             } else {
-                let sidebar = document.querySelector(".sidebar_ded4b5");
-                sidebar_cache = sidebar
+                sidebar = document.querySelector(".sidebar_ded4b5");
                 is_removed = true;
                 parent.removeChild(sidebar)
             }

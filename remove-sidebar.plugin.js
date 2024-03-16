@@ -6,7 +6,6 @@
  * 
  */
 
-let id;
 var sidebar;
 let is_removed = false;
 
@@ -33,6 +32,5 @@ module.exports = class Remove {
 
     stop() {
         document.body.removeEventListener("keydown", this.handleSidebar, false);
-        clearInterval(id)
     }
 }

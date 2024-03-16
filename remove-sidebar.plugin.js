@@ -12,9 +12,9 @@ let is_removed = false;
 
 module.exports = class Remove {
     handleSidebar(event) {
-        let parent = document.querySelector(".content__4bf10");
-        
         if (event.code == "Pause") {
+            let parent = document.querySelector(".content__4bf10");
+
             if (is_removed) {
                 console.log(sidebar)
                 parent.insertBefore(sidebar, parent.firstChild)    
@@ -25,7 +25,6 @@ module.exports = class Remove {
                 parent.removeChild(sidebar)
             }
         }
-
     }
 
     start() {
